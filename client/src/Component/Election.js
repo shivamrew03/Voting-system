@@ -110,7 +110,7 @@ function Election(props) {
     const checkIfAuthorized = await providerContract.voters(signer.address);
     if(checkIfAuthorized){
       let check = await providerContract.isCandidate(signer.address);
-      if(check){~
+      if(check){
         alert('Already candidate');
       }else{
         const checking = await providerContract.canVote();
